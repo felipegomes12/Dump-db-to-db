@@ -1,0 +1,36 @@
+# Dump db to db
+
+nesse projeto está disponível um script que permite sincronizar  um banco de dados mysql ou mariadb com outro, isso é util em casos como migração de banco de dados ou uma relação entre um banco de dados de homologação com um de produção.
+
+## Instalação
+### db_sync.sh
+bash
+
+```bash
+sudo curl -L https://raw.githubusercontent.com/felipegomes12/Dump-db-to-db/main/db_sync.sh -o /usr/local/bin/db_sync.sh
+sudo chmod +x /usr/local/bin/db_sync.sh 
+```
+## Uso
+### db_sync.sh
+A primeira vez que o comando for executado irá pedir as credenciais para acessar tanto o banco de dados de produção quanto de homologação, o script irá criar um arquivo de configuração chamado db_config.txt na mesma pasta em que o script está salvo, caso queira resetar as configurações só é necessario apagar esse arquivo.
+```shell
+sudo db_sync.sh
+```
+### add-ignore
+Esse argumento permite ignorar tabelas expecificas na no dump.
+```shell
+sudo db_sync.sh --add-ignore
+```
+### remove-ignore
+Esse argumento permite retirar uma tabela da lista de ignorados no dump.
+```shell
+sudo db_sync.sh --remove-ignore
+```
+## requerimentos
+- Sitema linux.
+- Acesso ao root ou a senha do root.
+- Link do repositorio publico ou link com token do repositorio caso seja privado.
+- mysql ou mariadb.
+- 2 bancos de dados distintos.
+## Permições
+Qualquer um é livre para baixar os arquivos e alterar para suprir suas necessidades.
