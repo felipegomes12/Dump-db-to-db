@@ -15,6 +15,11 @@ sudo apt install mysql-client
 sudo apt update
 sudo apt install mariadb-client
 ```
+#### Pipe Viewer
+```bash
+sudo apt update
+sudo apt install pv
+```
 ### db_sync.sh
 ```bash
 sudo curl -L https://raw.githubusercontent.com/felipegomes12/Dump-db-to-db/main/db_sync.sh -o /usr/local/bin/db_sync.sh
@@ -45,7 +50,8 @@ sudo db_sync.sh --list-ignore
 - Sitema linux.
 - Acesso ao root ou a senha do root.
 - Link do repositorio publico ou link com token do repositorio caso seja privado.
-- mysql-client ou mariadb-client.
+- Mysql-client ou mariadb-client.
+- Pipe viewer
 - 2 bancos de dados distintos.
 ## Permições
 Qualquer um é livre para baixar os arquivos e alterar para suprir suas necessidades.
