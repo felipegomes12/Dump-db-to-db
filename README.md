@@ -3,14 +3,7 @@
 nesse projeto está disponível um script que permite sincronizar  um banco de dados mysql ou mariadb com outro, isso é util em casos como migração de banco de dados ou uma relação entre um banco de dados de homologação com um de produção.
 
 ## Instalação
-### SQL Client
-caso não tenha instalado nem o mysql-client nem o mariadb-client siga os paços a baixo para instalar.
-#### Mysql
-```bash
-sudo apt update
-sudo apt install mysql-client
-```
-#### Mariadb
+### Mariadb Client
 ```bash
 sudo apt update
 sudo apt install mariadb-client
@@ -50,7 +43,7 @@ sudo db_sync.sh --list-ignore
 - Sitema linux.
 - Acesso ao root ou a senha do root.
 - Link do repositorio publico ou link com token do repositorio caso seja privado.
-- Mysql-client ou mariadb-client.
+- mariadb-client.
 - Pipe viewer
 - 2 bancos de dados distintos.
 ## Permições
