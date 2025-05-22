@@ -68,6 +68,13 @@ remove_ignore() {
     exit 0
 }
 
+# Função para listar tabelas ignoradas
+list_ignore() {
+    echo "Tabelas atualmente ignoradas:"
+    grep -vE '^\s*#|^\s*$' "$IGNORE_FILE" || echo "(nenhuma tabela ignorada)"
+    exit 0
+}
+
 # Função principal: dump e restore
 dump_and_restore() {
     echo "Iniciando sincronização do banco de dados..."
@@ -101,6 +108,9 @@ case "$1" in
         ;;
     --remove-ignore)
         remove_ignore
+        ;;
+    --list-ignore)
+        list_ignore
         ;;
     *)
         dump_and_restore
