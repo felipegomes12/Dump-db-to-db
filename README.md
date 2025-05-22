@@ -36,6 +36,11 @@ Esse argumento permite retirar uma tabela da lista de ignorados no dump.
 ```shell
 sudo db_sync.sh --remove-ignore
 ```
+### remove-ignore
+Esse argumento permite listar os ignorados no dump.
+```shell
+sudo db_sync.sh --list-ignore
+```
 ## requerimentos
 - Sitema linux.
 - Acesso ao root ou a senha do root.
